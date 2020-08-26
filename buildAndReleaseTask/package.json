@@ -1,0 +1,21 @@
+{
+  "name": "projectdiff",
+  "version": "1.0.0",
+  "description": "Set variables based on file changes",
+  "main": "index.js",
+  "scripts": {
+    "rund": "tsc && node index.js",
+    "test": "tsc && mocha tests/_suite.js"
+  },
+  "author": "THop",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.10.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.6.0",
+    "@types/q": "^1.5.4",
+    "sync-request": "^6.1.0"
+  }
+}
