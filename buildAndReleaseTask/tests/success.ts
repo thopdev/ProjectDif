@@ -5,6 +5,8 @@ import path = require("path");
 let taskPath = path.join(__dirname, "..", "index.js");
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
-tmr.setInput("samplestring", "human");
+var input = "portal: bla/sdf/, sdfasdf \nschedule: easdf";
+
+tmr.setInput("samplestring", input);
 
 tmr.run();

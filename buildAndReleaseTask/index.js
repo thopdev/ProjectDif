@@ -13,16 +13,20 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const inputString = tl.getInput("samplestring", false);
-            // if (inputString == "bad") {
-            //   tl.setResult(tl.TaskResult.Failed, "Bad input was given");
-            //   return;
-            // }
-            var result = yield execShellCommand("git diff HEAD HEAD~ --name-only");
-            let i = 0;
-            result.split("\n").forEach((line) => {
-                console.log(i++);
+            console.log(inputString);
+            if (inputString === undefined) {
+                return;
+            }
+            var projectWithText = inputString.split("\n");
+            projectWithText.forEach((project) => {
+                var x = project.split(":");
+                var name = x[0];
+                var fullPahts = x[1];
+                var paths = fullPahts.split(",");
+                console.log("Project: " + name);
+                paths.forEach((path) => console.log(" - " + path));
             });
-            console.log("Hello", inputString);
+            var result = yield execShellCommand("git diff HEAD HEAD~ --name-only");
         }
         catch (err) {
             tl.setResult(tl.TaskResult.Failed, err.message);

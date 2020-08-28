@@ -1,0 +1,29 @@
+{
+  "manifestVersion": 1,
+  "id": "a0ebe1c9-557f-4981-ac20-3fbd52845994",
+  "name": "ProjectDiff",
+  "version": "0.0.1",
+  "publisher": "THop",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Tools for building/releasing with Fabrikam. Includes one build/release task.",
+  "categories": ["Azure Pipelines"],
+  "files": [
+    {
+      "path": "buildAndReleaseTask"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "custom-build-release-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "buildAndReleaseTask"
+      }
+    }
+  ]
+}

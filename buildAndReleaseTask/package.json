@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "rund": "tsc && node index.js",
-    "test": "tsc && mocha tests/_suite.js"
+    "test": "tsc && mocha tests/_suite.js --timeout 100000"
   },
   "author": "THop",
   "license": "MIT",
