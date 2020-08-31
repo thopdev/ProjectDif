@@ -34,7 +34,7 @@ stages:
             inputs:
               testResultsFormat: "JUnit"
               testResultsFiles: "**/ResultsFile.xml"
-  - stage: Package_extension_and_ publish_ build
+  - stage: BuildAndRun
     jobs:
       - job:
         steps:
