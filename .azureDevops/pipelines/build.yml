@@ -5,8 +5,7 @@ pool:
   vmImage: "ubuntu-latest"
 
 variables:
-  - group: Build Task deployment
-
+  - group: BuildTask
 stages:
   - stage: Run_and_publish_unit_tests
     jobs:
