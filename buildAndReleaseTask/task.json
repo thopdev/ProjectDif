@@ -16,7 +16,7 @@
   "inputs": [
     {
       "name": "samplestring",
-      "type": "string",
+      "type": "multiLine",
       "label": "Sample String",
       "defaultValue": "",
       "required": true,
